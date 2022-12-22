@@ -8,12 +8,7 @@ import Catalog from "./Catalog";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div className="container">
-      <h2 className="pb-2 mb-4 border-bottom">Our Books</h2>
-      <div className="row">
-        <Catalog />
-      </div>
-    </div>
+    <Catalog />
   </React.StrictMode>
 );
 

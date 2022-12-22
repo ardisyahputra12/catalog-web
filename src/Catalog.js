@@ -16,6 +16,19 @@ class Catalog extends React.Component {
     }
 
     render() {
+        let container = (title, item) => {
+            return (
+                <Fragment>
+                    <div className="container">
+                        <h2 className="pb-2 mb-4 border-bottom">{title}</h2>
+                        <div className="row">
+                            {item}
+                        </div>
+                    </div>
+                </Fragment>
+            )
+        }
+
         let allItem = this.items.map((item) => {
             return (
                 <Fragment>
@@ -34,7 +47,8 @@ class Catalog extends React.Component {
 
         return (
             <Fragment>
-                {allItem}
+                {container("Popular", [allItem[1], allItem[6], allItem[3]])}
+                {container("Our Books", allItem)}
             </Fragment>
         )
     }
