@@ -1,5 +1,5 @@
-import { FiBookmark } from "react-icons/fi"
-import { FaBookmark } from "react-icons/fa"
+import { FiBookmark, FiThumbsUp } from "react-icons/fi"
+import { FaBookmark, FaThumbsUp } from "react-icons/fa"
 import React from "react"
 
 class CatalogItem extends React.Component {
@@ -10,14 +10,25 @@ class CatalogItem extends React.Component {
             author: this.props.item[1],
             publisher: this.props.item[2],
             year: this.props.item[3],
-            bookmark: Math.random() > 0.8
+            is_bookmark: Math.random() > 0.8,
+            is_like: false,
+            like_total: Math.random() * 10
         }
-        // this.check_bookmark = this.check_bookmark.bind(this)
+        this.check_bookmark = this.check_bookmark.bind(this)
     }
 
-    check_bookmark = () => {
+    check_bookmark() {
         this.setState((state) => {
-            return { bookmark: !state.bookmark }
+            return { is_bookmark: !state.is_bookmark }
+        })
+    }
+
+    check_like = () => {
+        this.setState((state) => {
+            return {
+                is_like: !state.is_like,
+                like_total: state.is_like ? state.like_total - 1 : state.like_total + 1
+            }
         })
     }
 
@@ -33,11 +44,12 @@ class CatalogItem extends React.Component {
                     </p>
                 </div>
                 <div className="card-footer text-muted d-flex">
-                    <p className="flex-grow-1 text-start">
-                        {this.state.bookmark ? "Bookmark" : ""}
-                    </p>
+                    <div className="flex-grow-1 text-start d-flex" onClick={this.check_like}>
+                        <p>{this.state.is_like ? <FaThumbsUp /> : <FiThumbsUp />} </p>
+                        <p>&nbsp;{this.state.like_total.toFixed()} like(s)</p>
+                    </div>
                     <p className="text-end" onClick={this.check_bookmark}>
-                        {this.state.bookmark ? <FaBookmark /> : <FiBookmark />}
+                        {this.state.is_bookmark ? <FaBookmark /> : <FiBookmark />}
                     </p>
                 </div>
             </div>
