@@ -10,9 +10,9 @@ class CatalogItem extends React.Component {
             author: this.props.item[1],
             publisher: this.props.item[2],
             year: this.props.item[3],
-            is_bookmark: Math.random() > 0.8,
+            is_bookmark: Math.random() > 0.7,
             is_like: false,
-            like_total: Math.random() * 10
+            like_total: Math.floor(Math.random() * 10) + 1
         }
         this.check_bookmark = this.check_bookmark.bind(this)
     }
@@ -27,7 +27,7 @@ class CatalogItem extends React.Component {
         this.setState((state) => {
             return {
                 is_like: !state.is_like,
-                like_total: state.is_like ? state.like_total - 1 : state.like_total + 1
+                like_total: state.like_total + (state.is_like ? -1 : 1)
             }
         })
     }
@@ -46,7 +46,7 @@ class CatalogItem extends React.Component {
                 <div className="card-footer text-muted d-flex">
                     <div className="flex-grow-1 text-start d-flex" onClick={this.check_like}>
                         <p>{this.state.is_like ? <FaThumbsUp /> : <FiThumbsUp />} </p>
-                        <p>&nbsp;{this.state.like_total.toFixed()} like(s)</p>
+                        <p>&nbsp;{this.state.like_total} like(s)</p>
                     </div>
                     <p className="text-end" onClick={this.check_bookmark}>
                         {this.state.is_bookmark ? <FaBookmark /> : <FiBookmark />}
