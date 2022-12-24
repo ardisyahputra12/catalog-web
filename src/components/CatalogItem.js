@@ -10,7 +10,7 @@ class CatalogItem extends React.Component {
             author: this.props.item[1],
             publisher: this.props.item[2],
             year: this.props.item[3],
-            is_bookmark: Math.random() > 0.8,
+            is_bookmark: Math.random() > 0.7,
             is_like: false,
             like_total: Math.floor(Math.random() * 10) + 1
         }

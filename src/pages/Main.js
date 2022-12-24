@@ -24,8 +24,9 @@ class Main extends React.Component {
                                     name="filter"
                                     id="filter_name"
                                     checked
+                                    readOnly
                                 />
-                                <label className="form-check-label mb-3" for="filter_name">
+                                <label className="form-check-label mb-3" htmlFor="filter_name">
                                     Title
                                 </label>
                             </div>
