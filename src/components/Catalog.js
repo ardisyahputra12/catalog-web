@@ -1,9 +1,9 @@
-import React, { Fragment } from "react"
-import CatalogItem from "./CatalogItem"
+import React, { Fragment } from "react";
+import CatalogItem from "./CatalogItem";
 
 class Catalog extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props);
         this.items = [
             ['Classical Mythology', 'Mark P. O. Morford', 'Oxford University Press', 2002],
             ['Rules of The Wild', 'Francesca Marciano', 'Random House Inc', 1998],
@@ -49,4 +49,4 @@ class Catalog extends React.Component {
     }
 }
 
-export default Catalog
+export default Catalog;

@@ -1,20 +1,20 @@
-import { FiBookmark, FiThumbsUp } from "react-icons/fi"
-import { FaBookmark, FaThumbsUp } from "react-icons/fa"
-import React from "react"
+import React from "react";
+import { FiBookmark, FiThumbsUp } from "react-icons/fi";
+import { FaBookmark, FaThumbsUp } from "react-icons/fa";
 
 class CatalogItem extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             title: this.props.item[0],
             author: this.props.item[1],
             publisher: this.props.item[2],
             year: this.props.item[3],
-            is_bookmark: Math.random() > 0.7,
+            is_bookmark: Math.random() > 0.8,
             is_like: false,
             like_total: Math.floor(Math.random() * 10) + 1
         }
-        this.check_bookmark = this.check_bookmark.bind(this)
+        this.check_bookmark = this.check_bookmark.bind(this);
     }
 
     check_bookmark() {
@@ -57,4 +57,4 @@ class CatalogItem extends React.Component {
     }
 }
 
-export default CatalogItem
+export default CatalogItem;
