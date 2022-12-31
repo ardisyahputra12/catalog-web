@@ -2,7 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import CatalogApp from "./apps/catalog-app/App";
+// import NewsApp from "./apps/news-app/NewsApp";
+// import CounterApp from "./apps/counter-app/CounterApp";
+// import MyForm from "./apps/my-form-app/MyFormApp";
+// import CatalogApp from "./apps/catalog-app/CatalogApp";
+import ContactApp from "./apps/contact-app/ContactApp";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -10,7 +15,7 @@ root.render(
     <BrowserRouter>
 
       {/* Change this element for other app */}
-      <CatalogApp />
+      <ContactApp />
 
     </BrowserRouter>
   </React.StrictMode>
