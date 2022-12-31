@@ -6,8 +6,9 @@ import GuestBook from "./pages/GuestBook";
 import AskMe from "./pages/AskMe";
 import Faq from "./pages/faq";
 import Layout from "./layouts/Layout";
+import './index.css';
 
-class App extends React.Component {
+class CatalogApp extends React.Component {
   render() {
     return (
       <Fragment>
@@ -26,4 +27,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default CatalogApp;
