@@ -6,8 +6,9 @@ import { BrowserRouter } from "react-router-dom";
 // import CounterApp from "./apps/counter-app/CounterApp";
 // import MyForm from "./apps/my-form-app/MyFormApp";
 // import App from "./apps/spa-react-router/App";
-// import CatalogApp from "./apps/catalog-app/CatalogApp";
-import ContactApp from "./apps/contact-app/ContactApp";
+// import App from "./apps/path-n-query-parameter/App";
+import CatalogApp from "./apps/catalog-app/CatalogApp";
+// import ContactApp from "./apps/contact-app/ContactApp";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -16,7 +17,7 @@ root.render(
     <BrowserRouter>
 
       {/* Change this element for other app */}
-      <ContactApp />
+      <CatalogApp />
 
     </BrowserRouter>
   </React.StrictMode>
