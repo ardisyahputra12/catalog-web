@@ -2,6 +2,8 @@
   "name": "simple-app",
   "version": "0.1.0",
   "private": true,
+  "author": "ardi_saputra <ardisaputraa12@gmail.com>",
+  "license": "MIT",
   "description": "This project contains several simple projects",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
